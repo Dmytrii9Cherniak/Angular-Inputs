@@ -1,0 +1,15 @@
+Реактивні форми
+
+<form [formGroup]="myForm" (ngSubmit)="save()">
+  <div>
+    <input type="text" [formControl]="username">
+    <span *ngIf="myForm.controls['username'].errors?.['required']">input required</span>
+    <span *ngIf="myForm.controls['username'].errors?.['minlength']">min length, actual length - {{myForm.controls['username'].errors?.['minlength']['actualLength']}}</span>
+  </div>
+
+  <div>
+  <input type="text" formControlName="password">
+  </div>
+  <button>Save</button>
+<!--  <button [disabled]="myForm.invalid">Save</button>-->
+</form>

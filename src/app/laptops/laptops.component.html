@@ -1,0 +1,8 @@
+<!--<form formGroup="laptopGroup" (ngSubmit)="sendLaptop()">-->
+<!--  <input type="text" id="name" formControlName="name"/>-->
+<!--  <input type="text" id="price" formControlName="price"/>-->
+<!--  <input type="text" id="description" formControlName="description"/>-->
+<!--  <button (click)="sendLaptop()">Add Laptop</button>-->
+<!--</form>-->
+
+<app-laptop [laptop]="laptop" *ngFor="let laptop of laptops"></app-laptop>

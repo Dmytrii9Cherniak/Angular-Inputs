@@ -1,0 +1,24 @@
+Шаблонні форми
+
+<form #tref (ngSubmit)="save(tref)">
+  <input type="text" name="username" [(ngModel)]="user.username">
+  <input type="text" name="password" [(ngModel)]="user.password" required>
+  <input type="checkbox" name="status" [(ngModel)]="user.status">
+
+  <div>
+    <label>
+      Gender
+      <input type="radio" name="gender" value="male" [(ngModel)]="user.gender">
+      <input type="radio" name="gender" value="female" [(ngModel)]="user.gender">
+    </label>
+  </div>
+  <select name="level" [(ngModel)]="user.level">
+    <option value="trainee">Trainee</option>
+    <option value="junior">Junior</option>
+    <option value="middle">Middle</option>
+    <option value="senior">Senior</option>
+    <option value="team_lead">Team Lead</option>
+  </select>
+
+  <button>Create</button>
+</form>
